@@ -1,115 +1,93 @@
 <!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-  <meta charset=\"UTF-8\" />
-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Origin Innovation Nigeria Ltd</title>
-  <link rel=\"icon\" href=\"assets/img/favicon.ico\">
-  <link href=\"css/tailwind.min.css\" rel=\"stylesheet\">
-  <script src=\"js/alpine.min.js\" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
-<body class=\"bg-white text-gray-800\" x-data=\"{ tab: 'about' }\">
-  <header class=\"bg-gradient-to-r from-blue-900 to-blue-600 text-white py-6 px-6 flex justify-between items-center\">
-    <div class=\"flex items-center gap-2\">
-      <img src=\"assets/img/logo.png\" alt=\"Logo\" class=\"h-10 w-auto\">
-      <h1 class=\"text-2xl font-bold\">Origin Innovation Nig Ltd</h1>
-    </div>
-    <nav class=\"flex gap-4 text-sm\">
-      <button @click=\"tab = 'about'\" class=\"hover:underline\">About</button>
-      <button @click=\"tab = 'services'\" class=\"hover:underline\">Services</button>
-      <button @click=\"tab = 'sectors'\" class=\"hover:underline\">Industries</button>
-      <button @click=\"tab = 'portfolio'\" class=\"hover:underline\">Portfolio</button>
-      <button @click=\"tab = 'contact'\" class=\"hover:underline\">Contact</button>
-    </nav>
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-900 to-blue-600 text-white py-10 px-6 text-center">
+    <h1 class="text-4xl font-bold mb-2">Origin Innovation Nigeria Ltd</h1>
+    <p class="text-lg">Engineering. Technology. Procurement. Transformation.</p>
   </header>
 
-  <main class=\"max-w-6xl mx-auto py-8\">
-    <div x-show=\"tab === 'about'\" class=\"p-4\">
-      <h2 class=\"text-xl font-semibold mb-2\">Who We Are</h2>
-      <p>We are an innovation-focused company delivering world-class services across construction, logistics, IT, and public sector consultancy.</p>
+  <!-- Tabs -->
+  <div x-data="{ tab: 'about' }" class="max-w-6xl mx-auto py-8">
+    <div class="flex flex-wrap justify-center gap-2 mb-4">
+      <button class="px-4 py-2 bg-gray-200 hover:bg-blue-200 rounded" @click="tab = 'about'">About</button>
+      <button class="px-4 py-2 bg-gray-200 hover:bg-blue-200 rounded" @click="tab = 'services'">Services</button>
+      <button class="px-4 py-2 bg-gray-200 hover:bg-blue-200 rounded" @click="tab = 'sectors'">Sectors</button>
+      <button class="px-4 py-2 bg-gray-200 hover:bg-blue-200 rounded" @click="tab = 'contact'">Contact</button>
     </div>
 
-    <div x-show=\"tab === 'services'\" class=\"p-4 grid gap-4 md:grid-cols-2\">
-      <div class=\"bg-gray-100 p-4 rounded\">Civil Engineering & Construction</div>
-      <div class=\"bg-gray-100 p-4 rounded\">IT Solutions & Cybersecurity</div>
-      <div class=\"bg-gray-100 p-4 rounded\">Healthcare Equipment Supply</div>
-      <div class=\"bg-gray-100 p-4 rounded\">Educational Consultancy</div>
-    </div>
-
-    <div x-show=\"tab === 'sectors'\" class=\"p-4\">
-      <h2 class=\"text-xl font-semibold mb-4\">Industries Served</h2>
-      <ul class=\"grid grid-cols-2 md:grid-cols-3 gap-4 list-disc list-inside\">
-        <li>Healthcare</li>
-        <li>Education</li>
-        <li>Manufacturing</li>
-        <li>Banking & Finance</li>
-        <li>Retail & E-Commerce</li>
-        <li>Public Sector</li>
-      </ul>
-    </div>
-
-    <div x-show=\"tab === 'portfolio'\" class=\"p-4\">
-      <h2 class=\"text-xl font-semibold mb-4\">Our Portfolio</h2>
-      <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">
-        <img src=\"assets/img/portfolio/project1.jpg\" alt=\"Project 1\" class=\"rounded shadow-md\">
-        <img src=\"assets/img/portfolio/project2.jpg\" alt=\"Project 2\" class=\"rounded shadow-md\">
+    <!-- About Section -->
+    <div x-show="tab === 'about'" class="p-4">
+      <div class="bg-white shadow-md rounded p-6">
+        <h2 class="text-2xl font-semibold mb-2">Who We Are</h2>
+        <p>
+          Origin Innovation Nig. Ltd is a multi-sectoral service provider delivering innovation-driven solutions in engineering, logistics,
+          procurement, IT and government consulting. With over a decade of experience, we offer expert-led execution for both
+          public and private sector clients.
+        </p>
       </div>
     </div>
 
-    <div x-show=\"tab === 'team'" class="hover:underline">Our Team</button>
-      <button @click="tab = 'contact'\" class=\"p-4\">
-      <h2 class=\"text-xl font-semibold mb-2\">Get In Touch</h2>
-      <p><strong>Phone:</strong> +234 808 903 0000</p>
-      <p><strong>Email:</strong> origininnovation@gmail.com</p>
-      <p><strong>Address:</strong> Suite A302, MAB Global Plaza, Jabi, Abuja</p>
+    <!-- Services Section -->
+    <div x-show="tab === 'services'" class="grid md:grid-cols-2 gap-4 p-4">
+      <template x-for="service in [
+        'Civil Engineering & Construction',
+        'Procurement & Supply Chain',
+        'Automotive & Transport Solutions',
+        'Healthcare Equipment & Setup',
+        'Retail & E-Commerce Distribution',
+        'Custom IT Solutions',
+        'Cybersecurity Systems',
+        'Educational Consultancy',
+        'Manufacturing Support',
+        'Banking & Fintech Services',
+        'Public Sector Projects & e-Government']">
+        <div class="bg-white shadow-md p-4 rounded">
+          <h3 class="text-xl font-bold mb-1" x-text="service"></h3>
+          <p class="text-sm text-gray-600">Comprehensive and customized service offerings designed to meet industry-specific challenges.</p>
+        </div>
+      </template>
     </div>
-  
-<section x-show=\"tab === 'team'\" class=\"p-6\">
-  <h2 class=\"text-2xl font-semibold mb-6 text-center\">Our Team</h2>
-  <div class=\"grid sm:grid-cols-2 md:grid-cols-3 gap-6\">
-    <div class=\"text-center\">
-      <img src=\"https://via.placeholder.com/300x300?text=Ibrahim+Musa\" alt=\"Engr. Ibrahim Musa\" class=\"rounded-full mx-auto mb-2 w-40 h-40 object-cover\">
-      <h3 class=\"font-bold\">Engr. Ibrahim Musa</h3>
-      <p class=\"text-sm text-gray-600\">Managing Director</p>
-      <p class=\"text-xs text-gray-500\">Civil Engineering, Project Management – 15+ yrs</p>
+
+    <!-- Sectors Section -->
+    <div x-show="tab === 'sectors'" class="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
+      <template x-for="sector in [
+        'Healthcare',
+        'Education',
+        'Manufacturing',
+        'Banking & Finance',
+        'Retail & e-Commerce',
+        'Government & Public Sector',
+        'Transportation',
+        'ICT & Telecommunications',
+        'Oil & Gas']">
+        <div class="bg-white shadow-sm p-4 rounded">
+          <h4 class="font-semibold text-lg" x-text="sector"></h4>
+        </div>
+      </template>
     </div>
-    <div class=\"text-center\">
-      <img src=\"https://via.placeholder.com/300x300?text=Chinyere+Okafor\" alt=\"Mrs. Chinyere Okafor\" class=\"rounded-full mx-auto mb-2 w-40 h-40 object-cover\">
-      <h3 class=\"font-bold\">Mrs. Chinyere Okafor</h3>
-      <p class=\"text-sm text-gray-600\">Director, Strategy & Ops</p>
-      <p class=\"text-xs text-gray-500\">Business Strategy, Supply Chain – 12 yrs</p>
-    </div>
-    <div class=\"text-center\">
-      <img src=\"https://via.placeholder.com/300x300?text=Femi+Adebayo\" alt=\"Mr. Femi Adebayo\" class=\"rounded-full mx-auto mb-2 w-40 h-40 object-cover\">
-      <h3 class=\"font-bold\">Mr. Femi Adebayo</h3>
-      <p class=\"text-sm text-gray-600\">Lead Software Engineer</p>
-      <p class=\"text-xs text-gray-500\">Web & Mobile Dev – 9 yrs</p>
-    </div>
-    <div class=\"text-center\">
-      <img src=\"https://via.placeholder.com/300x300?text=Aisha+Bello\" alt=\"Ms. Aisha Bello\" class=\"rounded-full mx-auto mb-2 w-40 h-40 object-cover\">
-      <h3 class=\"font-bold\">Ms. Aisha Bello</h3>
-      <p class=\"text-sm text-gray-600\">Head, Health Tech Division</p>
-      <p class=\"text-xs text-gray-500\">Medical Equipment & ICT – 8 yrs</p>
-    </div>
-    <div class=\"text-center\">
-      <img src=\"https://via.placeholder.com/300x300?text=Seyi+Lawal\" alt=\"Mr. Seyi Lawal\" class=\"rounded-full mx-auto mb-2 w-40 h-40 object-cover\">
-      <h3 class=\"font-bold\">Mr. Seyi Lawal</h3>
-      <p class=\"text-sm text-gray-600\">Procurement & Logistics Lead</p>
-      <p class=\"text-xs text-gray-500\">Global Sourcing & Warehousing – 10 yrs</p>
-    </div>
-    <div class=\"text-center\">
-      <img src=\"https://via.placeholder.com/300x300?text=Grace+Umeh\" alt=\"Mrs. Grace Umeh\" class=\"rounded-full mx-auto mb-2 w-40 h-40 object-cover\">
-      <h3 class=\"font-bold\">Mrs. Grace Umeh</h3>
-      <p class=\"text-sm text-gray-600\">Client Relations & Public Liaison</p>
-      <p class=\"text-xs text-gray-500\">Govt Relations – 7 yrs</p>
+
+    <!-- Contact Section -->
+    <div x-show="tab === 'contact'" class="p-6">
+      <div class="bg-white shadow-md p-6 rounded space-y-4">
+        <h2 class="text-2xl font-bold">Get In Touch</h2>
+        <p><strong>Phone:</strong> +234 808 903 0000 / +234 816 709 4429</p>
+        <p><strong>Email:</strong> origininnovation@gmail.com</p>
+        <p><strong>Address:</strong> Suite A302, MAB Global Plaza, Jabi, Abuja</p>
+      </div>
     </div>
   </div>
-</section>
 
-  </main>
-
-  <footer class=\"text-center text-xs py-4 bg-gray-100 mt-10\">
-    &copy; <script>document.write(new Date().getFullYear());</script> Origin Innovation Nigeria Ltd. All Rights Reserved.
+  <!-- Footer -->
+  <footer class="text-center text-xs py-4 bg-gray-100 mt-10">
+    &copy; <span x-text="new Date().getFullYear()"></span> Origin Innovation Nigeria Ltd. All Rights Reserved.
   </footer>
 </body>
 </html>
