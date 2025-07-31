@@ -1,93 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Origin Innovation Nigeria Ltd</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-</head>
-<body class="bg-white text-gray-800">
-  <!-- Header -->
-  <header class="bg-gradient-to-r from-blue-900 to-blue-600 text-white py-10 px-6 text-center">
-    <h1 class="text-4xl font-bold mb-2">Origin Innovation Nigeria Ltd</h1>
-    <p class="text-lg">Engineering. Technology. Procurement. Transformation.</p>
-  </header>
+	<head>
+		<meta charset="utf-8">
+		<!-- 
+        Awesome Template
+        http://www.templatemo.com/preview/templatemo_450_awesome
+        -->
+		<title>Origin Innovation Nigeria Ltd - Excellence in Innovation</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="css/animate.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/templatemo-style.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.singlePageNav.min.js"></script>
+		<script src="js/typed.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/custom.js"></script>
+	</head>
+	<body id="top">
 
-  <!-- Tabs -->
-  <div x-data="{ tab: 'about' }" class="max-w-6xl mx-auto py-8">
-    <div class="flex flex-wrap justify-center gap-2 mb-4">
-      <button class="px-4 py-2 bg-gray-200 hover:bg-blue-200 rounded" @click="tab = 'about'">About</button>
-      <button class="px-4 py-2 bg-gray-200 hover:bg-blue-200 rounded" @click="tab = 'services'">Services</button>
-      <button class="px-4 py-2 bg-gray-200 hover:bg-blue-200 rounded" @click="tab = 'sectors'">Sectors</button>
-      <button class="px-4 py-2 bg-gray-200 hover:bg-blue-200 rounded" @click="tab = 'contact'">Contact</button>
-    </div>
+		<!-- start preloader -->
+		<div class="preloader">
+			<div class="sk-spinner sk-spinner-wave">
+     	 		<div class="sk-rect1"></div>
+       			<div class="sk-rect2"></div>
+       			<div class="sk-rect3"></div>
+      	 		<div class="sk-rect4"></div>
+      			<div class="sk-rect5"></div>
+     		</div>
+    	</div>
+    	<!-- end preloader -->
 
-    <!-- About Section -->
-    <div x-show="tab === 'about'" class="p-4">
-      <div class="bg-white shadow-md rounded p-6">
-        <h2 class="text-2xl font-semibold mb-2">Who We Are</h2>
-        <p>
-          Origin Innovation Nig. Ltd is a multi-sectoral service provider delivering innovation-driven solutions in engineering, logistics,
-          procurement, IT and government consulting. With over a decade of experience, we offer expert-led execution for both
-          public and private sector clients.
-        </p>
-      </div>
-    </div>
+        <!-- start header -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <p><i class="fa fa-phone"></i><span> Phone</span>+234 808 903 0000</p>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <p><i class="fa fa-envelope-o"></i><span> Email</span><a href="#">origininnovation@gmail.com</a></p>
+                    </div>
+                    <div class="col-md-5 col-sm-4 col-xs-12">
+                        <ul class="social-icon">
+                            <li><span>Meet us on</span></li>
+                            <li><a href="#" class="fa fa-facebook"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-instagram"></a></li>
+                            <li><a href="#" class="fa fa-apple"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
 
-    <!-- Services Section -->
-    <div x-show="tab === 'services'" class="grid md:grid-cols-2 gap-4 p-4">
-      <template x-for="service in [
-        'Civil Engineering & Construction',
-        'Procurement & Supply Chain',
-        'Automotive & Transport Solutions',
-        'Healthcare Equipment & Setup',
-        'Retail & E-Commerce Distribution',
-        'Custom IT Solutions',
-        'Cybersecurity Systems',
-        'Educational Consultancy',
-        'Manufacturing Support',
-        'Banking & Fintech Services',
-        'Public Sector Projects & e-Government']">
-        <div class="bg-white shadow-md p-4 rounded">
-          <h3 class="text-xl font-bold mb-1" x-text="service"></h3>
-          <p class="text-sm text-gray-600">Comprehensive and customized service offerings designed to meet industry-specific challenges.</p>
-        </div>
-      </template>
-    </div>
+    	<!-- start navigation -->
+		<nav class="navbar navbar-default templatemo-nav" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">Origin Innovation</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#top">HOME</a></li>
+						<li><a href="#about">ABOUT</a></li>
+						<li><a href="#team">TEAM</a></li>
+						<li><a href="#service">SERVICES</a></li>
+						<li><a href="#portfolio">PORTFOLIO</a></li>
+						<li><a href="#contact">CONTACT</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- end navigation -->
 
-    <!-- Sectors Section -->
-    <div x-show="tab === 'sectors'" class="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
-      <template x-for="sector in [
-        'Healthcare',
-        'Education',
-        'Manufacturing',
-        'Banking & Finance',
-        'Retail & e-Commerce',
-        'Government & Public Sector',
-        'Transportation',
-        'ICT & Telecommunications',
-        'Oil & Gas']">
-        <div class="bg-white shadow-sm p-4 rounded">
-          <h4 class="font-semibold text-lg" x-text="sector"></h4>
-        </div>
-      </template>
-    </div>
+    	<!-- start home -->
+    	<section id="home">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-offset-2 col-md-8">
+    					<h1 class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">We deliver solutions that are <span>innovative</span></h1>
+    					<div class="element">
+                            <div class="sub-element">Origin Innovation Nigeria Ltd is provided by experienced professionals.</div>
+                            <div class="sub-element">Download our portfolio, review our services and partner with us for success.</div>
+                            <div class="sub-element">Innovation meets excellence in every project we deliver.</div>
+                        </div>
+    					<a data-scroll href="#about" class="btn btn-default wow fadeInUp" data-wow-offset="50" data-wow-delay="0.6s">GET STARTED</a>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- end home -->
 
-    <!-- Contact Section -->
-    <div x-show="tab === 'contact'" class="p-6">
-      <div class="bg-white shadow-md p-6 rounded space-y-4">
-        <h2 class="text-2xl font-bold">Get In Touch</h2>
-        <p><strong>Phone:</strong> +234 808 903 0000 / +234 816 709 4429</p>
-        <p><strong>Email:</strong> origininnovation@gmail.com</p>
-        <p><strong>Address:</strong> Suite A302, MAB Global Plaza, Jabi, Abuja</p>
-      </div>
-    </div>
-  </div>
+    	<!-- start about -->
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">WHO <span>WE ARE</span></h2>
+    				</div>
+					<div class="col-md-4 col-sm-4 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.6s">
+						<div class="media">
+							<div class="media-heading-wrapper">
+								<div class="media-object pull-left">
+									<i class="fa fa-mobile"></i>
+								</div>
+								<h3 class="media-heading">MULTI-SECTOR EXPERTISE</h3>
+							</div>
+							<div class="media-body">
+								<p>Origin Innovation Nigeria Ltd is a leading multi-sector company delivering innovative solutions across construction, technology, healthcare, and consultancy services. With over 15 years of experience, we understand diverse industry needs.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-offset="50" data-wow-delay="0.9s">
+						<div class="media">
+							<div class="media-heading-wrapper">
+								<div class="media-object pull-left">
+									<i class="fa fa-comment-o"></i>
+								</div>
+								<h3 class="media-heading">DEDICATED SUPPORT</h3>
+							</div>
+							<div class="media-body">
+								<p>Our commitment extends beyond project delivery. We provide ongoing support, maintenance, and consultation to ensure your continued success. Our team of experts is always available to address your needs and help you achieve your business objectives.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
+						<div class="media">
+							<div class="media-heading-wrapper">
+								<div class="media-object pull-left">
+									<i class="fa fa-html5"></i>
+								</div>
+								<h3 class="media-heading">CUTTING-EDGE TECHNOLOGY</h3>
+							</div>
+							<div class="media-body">
+								<p>We leverage the latest technologies and industry best practices to deliver innovative solutions. From advanced construction techniques to state-of-the-art IT systems, we ensure our clients stay ahead of the competition.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end about -->
 
-  <!-- Footer -->
-  <footer class="text-center text-xs py-4 bg-gray-100 mt-10">
-    &copy; <span x-text="new Date().getFullYear()"></span> Origin Innovation Nigeria Ltd. All Rights Reserved.
-  </footer>
-</body>
+    	<!-- start team -->
+    	<section id="team">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>OUR</span> TEAM</h2>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
+    					<div class="team-wrapper">
+    						<img src="images/team-img1.jpg" class="img-responsive" alt="team img 1">
+    							<div class="team-des">
+    								<h4>EFOSA</h4>
+    								<span>Managing Director</span>
+    								<p>Leading the company with extensive experience in large-scale infrastructure projects and strategic business development. 15+ years in Civil Engineering and Project Management.</p>
+    							</div>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.6s">
+    					<div class="team-wrapper">
+    						<img src="images/team-img2.jpg" class="img-responsive" alt="team img 2">
+    							<div class="team-des">
+    								<h4>IFEANYI</h4>
+    								<span>Director, Strategy & Operations</span>
+    								<p>Driving operational excellence and strategic initiatives with deep expertise in supply chain optimization and business strategy. 12 years experience.</p>
+    							</div>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
+    					<div class="team-wrapper">
+    						<img src="images/team-img3.jpg" class="img-responsive" alt="team img 3">
+    							<div class="team-des">
+    								<h4>OLUMIDE</h4>
+    								<span>Lead Software Engineer</span>
+    								<p>Leading our technology initiatives with expertise in modern software development and digital transformation projects. 9 years in Web & Mobile Development.</p>
+    							</div>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.6s">
+    					<div class="team-wrapper">
+    						<img src="images/team-img4.jpg" class="img-responsive" alt="team img 4">
+    							<div class="team-des">
+    								<h4>ONAOKEME</h4>
+    								<span>Head, Health Tech Division</span>
+    								<p>Specializing in healthcare technology solutions and medical equipment procurement with a focus on improving patient outcomes. 8 years experience.</p>
+    							</div>
+    					</div>
+    				</div>
+					<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
+    					<div class="team-wrapper">
+    						<img src="images/team-img1.jpg" class="img-responsive" alt="team img 1">
+    							<div class="team-des">
+    								<h4>OGHENEMINE</h4>
+    								<span>Procurement & Logistics Lead</span>
+    								<p>Managing complex procurement processes and logistics operations with expertise in global sourcing and supply chain management. 10 years experience.</p>
+    							</div>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.6s">
+    					<div class="team-wrapper">
+    						<img src="images/team-img2.jpg" class="img-responsive" alt="team img 2">
+    							<div class="team-des">
+    								<h4>SHARON</h4>
+    								<span>Client Relations & Public Liaison</span>
+    								<p>Building strong client relationships and managing public sector engagements with extensive government relations experience. 7 years experience.</p>
+    							</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- end team -->
+
+    	<!-- start service -->
+    	<section id="service">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">OUR <span>SPECTRUM</span> OF SERVICES</h2>
+    				</div>
+    				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+    					<i class="fa fa-building"></i>
+    					<h4>Civil Engineering & Construction</h4>
+    					<p>Comprehensive construction services from planning to execution, including infrastructure development, building construction, and project management. We deliver quality projects on time and within budget, ensuring compliance with all regulatory requirements.</p>
+    				</div>
+    				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">
+    					<i class="fa fa-laptop"></i>
+    					<h4>IT Solutions & Cybersecurity</h4>
+    					<p>Cutting-edge technology solutions including software development, system integration, cybersecurity, and digital transformation services. We help organizations leverage technology to improve efficiency and drive growth.</p>
+    				</div>
+    				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+    					<i class="fa fa-heart"></i>
+    					<h4>Healthcare Equipment Supply</h4>
+    					<p>Specialized procurement and supply of medical equipment, healthcare technology solutions, and maintenance services for healthcare facilities. We ensure healthcare providers have access to the latest medical technology.</p>
+    				</div>
+    			</div>
+    		</div>
+			<div class="container">
+    			<div class="row">
+    				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+    					<i class="fa fa-graduation-cap"></i>
+    					<h4>Educational Consultancy</h4>
+    					<p>Educational consulting services including curriculum development, institutional planning, educational technology integration, and capacity building programs for educational institutions.</p>
+    				</div>
+    				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+    					<i class="fa fa-shield"></i>
+    					<h4>Public Sector Consultancy</h4>
+    					<p>Strategic consulting for government agencies and public institutions, policy development, and public-private partnership facilitation to improve governance and service delivery.</p>
+    				</div>
+    				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+    					<i class="fa fa-truck"></i>
+    					<h4>Logistics & Supply Chain</h4>
+    					<p>End-to-end logistics solutions including procurement, warehousing, distribution, and supply chain optimization services to streamline operations and reduce costs.</p>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- end servie -->
+
+    	<!-- start portfolio (Our Works) -->
+    	<section id="portfolio">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>OUR</span> WORKS</h2>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+                        <div class="portfolio-thumb">
+    					   <img src="images/portfolio-img1.jpg" class="img-responsive" alt="Federal Ministry IT Infrastructure">
+                                <div class="portfolio-overlay">
+                                    <h4>Federal Ministry IT Infrastructure</h4>
+                                    <p>Complete IT infrastructure overhaul including network setup and cybersecurity implementation.</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+                        <div class="portfolio-thumb">
+                           <img src="images/portfolio-img2.jpg" class="img-responsive" alt="University Teaching Hospital">
+                                <div class="portfolio-overlay">
+                                    <h4>University of Benin Teaching Hospital</h4>
+                                    <p>Procurement and installation of advanced medical equipment including MRI and CT scanners.</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+                        <div class="portfolio-thumb">
+                           <img src="images/portfolio-img3.jpg" class="img-responsive" alt="Smart Campus Development.">
+                                <div class="portfolio-overlay">
+                                    <h4>Smart Campus Development</h4>
+                                    <p>Design and construction of modern educational facility with integrated smart technology.</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+                        <div class="portfolio-thumb">
+                           <img src="images/portfolio-img4.jpg" class="img-responsive" alt="portfolio img 4">
+                                <div class="portfolio-overlay">
+                                    <h4>Digital Transformation Project</h4>
+                                    <p>Comprehensive digital transformation strategy for improved government services.</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+                        <div class="portfolio-thumb">
+                           <img src="images/portfolio-img3.jpg" class="img-responsive" alt="portfolio img 3">
+                                <div class="portfolio-overlay">
+                                    <h4>Healthcare Technology Hub</h4>
+                                    <p>State-of-the-art healthcare facility with integrated technology solutions.</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+                        <div class="portfolio-thumb">
+                           <img src="images/portfolio-img4.jpg" class="img-responsive" alt="portfolio img 4">
+                                <div class="portfolio-overlay">
+                                    <h4>Educational Infrastructure</h4>
+                                    <p>Modern school construction with sustainable infrastructure and smart classrooms..</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+                        <div class="portfolio-thumb">
+                           <img src="images/portfolio-img1.jpg" class="img-responsive" alt="portfolio img 1">
+                                <div class="portfolio-overlay">
+                                    <h4>Government Data Center</h4>
+                                    <p>Secure data center implementation with advanced cybersecurity measures.</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+                        <div class="portfolio-thumb">
+                           <img src="images/portfolio-img2.jpg" class="img-responsive" alt="portfolio img 2">
+                                <div class="portfolio-overlay">
+                                    <h4>Medical Equipment Supply</h4>
+                                    <p>Large-scale medical equipment procurement for multiple healthcare facilities.</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+                    </div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- end portfolio -->
+
+    	<!-- start contact -->
+    	<section id="contact">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">CONTACT <span>ORIGIN INNOVATION</span></h2>
+    				</div>
+    				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.9s">
+    					<form action="#" method="post">
+    						<label>NAME</label>
+    						<input name="fullname" type="text" class="form-control" id="fullname">
+   						  	
+                            <label>EMAIL</label>
+    						<input name="email" type="email" class="form-control" id="email">
+   						  	
+                            <label>MESSAGE</label>
+    						<textarea name="message" rows="4" class="form-control" id="message"></textarea>
+    						
+                            <input type="submit" class="form-control">
+    					</form>
+    				</div>
+    				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
+    					<address>
+    						<p class="address-title">OUR ADDRESS</p>
+    						<span>Origin Innovation Nigeria Ltd is your trusted partner for comprehensive solutions across construction, IT, healthcare, and consultancy services. Contact us today to discuss your project requirements.</span>
+    						<p><i class="fa fa-phone"></i> +234 808 903 0000</p>
+    						<p><i class="fa fa-envelope-o"></i> origininnovation@gmail.com</p>
+    						<p><i class="fa fa-map-marker"></i> Suite A302, MAB Global Plaza, Jabi, Abuja</p>
+    					</address>
+    					<ul class="social-icon">
+    						<li><h4>WE ARE SOCIAL</h4></li>
+    						<li><a href="#" class="fa fa-facebook"></a></li>
+    						<li><a href="#" class="fa fa-twitter"></a></li>
+    						<li><a href="#" class="fa fa-instagram"></a></li>
+    					</ul>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- end contact -->
+
+        <!-- start copyright -->
+        <footer id="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<p class="animate__animated animate__bounceIn">
+							Copyright &copy; <script>document.write(new Date().getFullYear());</script> Origin Innovation Nigeria Ltd. All Rights Reserved.
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+        <!-- end copyright -->
+
+	</body>
 </html>
