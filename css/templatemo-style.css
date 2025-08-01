@@ -199,91 +199,50 @@ header .social-icon li a
 	left: 0;
 	top: 0;	
 }
-
-.navbar-brand.logo img {
-    height: 50px; /* Set a fixed height for the logo */
-    width: auto;
-    margin-top: -15px; /* Adjust this value to vertically align the logo */
-    margin-left: -15px; /* Adjust to align it horizontally */
-    padding: 0;
-}
-
-/* Adjustments for smaller screens if needed */
-@media (max-width: 768px) {
-    .navbar-brand.logo img {
-        height: 40px;
-        margin-top: -10px;
-        margin-left: 0;
-    }
-}
-
 /* end navigation */
 
 /* start home */
-#home {
-    background: url('../images/home-bg.jpg') no-repeat;
-    background-size: cover;
-    background-position: center; /* This ensures the background image is centered */
-    background-repeat: no-repeat;
-    height: 100vh; /* This makes the section fill the full viewport height */
-    display: flex; /* Flexbox for vertical alignment */
-    align-items: center; /* Centers content vertically */
-    justify-content: center; /* Centers content horizontally */
-    text-align: center;
-    color: #fff;
-    position: relative;
-    z-index: 1;
-}
-#home h1 {
-    font-weight: 300;
-    font-size: 70px;
-    padding-bottom: 10px;
-}
-#home h1 span {
-    color: #28a7e9;
-    font-weight: bold;
-}
-#home .btn {
-    background: transparent;
-    border-radius: 2px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 20px;
-    width: 180px;
-    height: 60px;
-    padding-top: 18px;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-}
-#home .btn:hover {
-    background: #28a7e9;
-    border-color: transparent;
-}
+#home
+	{
+		background: url('../images/home-bg.jpg') no-repeat;
+		background-size: cover;
+		padding-top: 160px;
+		padding-bottom: 100px;
+		min-height: 650px;
+	}
+#home h1
+	{
+		font-weight: 300;
+		font-size: 70px;
+		padding-bottom: 10px;
+	}
+#home h1 span
+	{
+		color: #28a7e9;
+		font-weight: bold;
+	}
+#home .btn
+	{
+		background: transparent;
+		border-radius: 2px;
+		color: #fff;
+		font-size: 16px;
+		font-weight: bold;
+		margin-top: 20px;
+		width: 180px;
+		height: 60px;
+		padding-top: 18px;
+		-webkit-transition: all 0.4s ease-in-out;
+		        transition: all 0.4s ease-in-out;
+	}
+#home .btn:hover
+	{
+		background: #28a7e9;
+		border-color: transparent;
+	}
 .element {
-    height: 60px;
-    font-size: 16px;
-}
-/* Optional: Add a subtle overlay to improve text readability on the banner */
-#home:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
-    z-index: -1;
-}
-
-/* Media queries for better mobile responsiveness */
-@media (max-width: 768px) {
-    #home h1 {
-        font-size: 2.5em; /* Make the heading smaller on mobile */
-    }
-    #home .element {
-        font-size: 1.2em;
-    }
+	height: 60px;
+	font-size: 16px;
 }
 /* end home */
 
@@ -433,119 +392,6 @@ header .social-icon li a
 		opacity: 0.8;
 	}
 /* end portfolio */
-
-/* start industries */
-#industries {
-    padding: 80px 0;
-    text-align: center;
-    background: #f9f9f9;
-}
-#industries h2 {
-    color: #333;
-    margin-bottom: 50px;
-}
-.industries-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-.industry-item {
-    background: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-    border-bottom: 3px solid transparent;
-}
-.industry-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    border-bottom: 3px solid #337ab7;
-}
-.industry-item .icon-container {
-    font-size: 48px;
-    color: #337ab7;
-    margin-bottom: 20px;
-}
-.industry-item h4 {
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 15px;
-}
-.industry-item p {
-    color: #666;
-    font-size: 14px;
-}
-/* end industries */
-
-/* start testimonials */
-#testimonials {
-    padding: 80px 0;
-    background-color: #202020; /* Dark background for better contrast */
-    text-align: center;
-    color: #fff;
-}
-#testimonials h2 {
-    color: #fff;
-    margin-bottom: 50px;
-}
-.testimonial-box {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #2c2c2c;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    position: relative;
-    border-left: 5px solid #337ab7;
-}
-.testimonial-box p {
-    font-style: italic;
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #f1f1f1;
-    margin-bottom: 20px;
-}
-.client-info h4 {
-    font-weight: bold;
-    color: #337ab7;
-    margin-bottom: 5px;
-}
-.client-info span {
-    display: block;
-    color: #aaa;
-    font-size: 0.9em;
-}
-.carousel-control {
-    width: 5%;
-    background: none;
-    text-shadow: none;
-    opacity: 1;
-    font-size: 30px;
-    color: #337ab7;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.carousel-control:hover {
-    color: #fff;
-}
-.carousel-control.left {
-    left: -10%;
-}
-.carousel-control.right {
-    right: -10%;
-}
-.carousel-indicators {
-    bottom: -40px;
-}
-.carousel-indicators li {
-    background-color: #555;
-    border: none;
-}
-.carousel-indicators .active {
-    background-color: #337ab7;
-}
-/* end testimonials */
 
 /* start contact */
 #contact
