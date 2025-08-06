@@ -620,6 +620,23 @@ header .social-icon li a
 	}
 /* end contact */
 
+/* start form-messages */
+#form-messages {
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#form-messages.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+#form-messages.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+/* end form-messages */
+
 /* start social icon */
 .social-icon
 	{
