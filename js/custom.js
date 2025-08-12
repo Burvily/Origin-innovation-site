@@ -11,7 +11,9 @@ $(function(){
         contentType: 'html',
         showCursor: false,
         loop: true,
-        loopCount: true,
+        loopCount: false, // Changed from true to false to prevent infinite loops
+        backDelay: 2000, // Add delay before starting to type the next string
+        backSpeed: 20, // Slower backspacing to reduce visual jarring
     });
     /* end typed element */
 
@@ -45,6 +47,42 @@ $(function(){
     /* wow
     -----------------*/
     new WOW().init();
+    
+    /* Hero Carousel Configuration */
+    if ($('#heroCarousel').length) {
+        try {
+            // Simple carousel initialization - let Bootstrap handle everything
+            $('#heroCarousel').carousel({
+                interval: 5000,
+                pause: 'hover',
+                wrap: true
+            });
+            
+            // Add animation class only once when page loads to prevent blinking
+            $('#heroCarousel .carousel-content').addClass('animate-once');
+            
+            // Remove the problematic WOW.js re-initialization that causes blinking
+            // $('#heroCarousel').on('slid.bs.carousel', function () {
+            //     // Reinitialize WOW animations for new slides
+            //     new WOW().init();
+            // });
+            
+            // Add debugging
+            $('#heroCarousel').on('slide.bs.carousel', function (e) {
+                console.log('Carousel sliding from slide', e.from, 'to slide', e.to);
+            });
+            
+            $('#heroCarousel').on('shown.bs.carousel', function (e) {
+                console.log('Carousel shown slide:', e.relatedTarget);
+            });
+            
+            console.log('Hero carousel initialized successfully');
+        } catch (error) {
+            console.error('Error initializing hero carousel:', error);
+        }
+    } else {
+        console.log('Hero carousel element not found');
+    }
 });
 
 /* start preloader */
@@ -100,4 +138,6 @@ $(function() {
         });
     });
 });
+
+
 /* end preloader */
